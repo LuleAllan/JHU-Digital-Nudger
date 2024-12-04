@@ -71,8 +71,9 @@ class TraineeAdminForm(TrainerAdminForm):
 
     def __init__(self, *args, **kwargs):
         super(TraineeAdminForm, self).__init__(*args, **kwargs)
-        self.fields['email'].required = False
+        self.fields['email'].required = True
         self.fields['notes'].required = False
+        self.fields['phone_number'].required = False
 
     class Meta:
         model = Trainee

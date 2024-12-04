@@ -363,8 +363,12 @@ class UserNotesAdminClass(DfesAdminModelMixin, ModelAdmin, ExportActionModelAdmi
         notes_type_filter = request.GET.get('notes_type')
         time_created_filter = request.GET.get('time_created')
         url = "https://kasukuappstore.com/apptest/get_user_saved_notes.php"
-        data = requests.get(url=url)
-        data = {"data": data.json()}
+        
+        try:
+            data = requests.get(url=url)
+            data = {"data": data.json()}
+        except Exception as e:
+            data = {"data": []}
 
         items = [UserNote(**i) for i in data.get("data") or []]
         

@@ -91,25 +91,45 @@
             <div class="flex-1 w-32 ...">
                 <div class="max-w-sm p-3 bg-white border border-gray-200 rounded shadow dark:bg-gray-800 dark:border-gray-700">
                     <p style="font-weight: bold;" class="mb-1 font-normal text-sm text-center text-gray-450 dark:text-gray-450">Reminders</p>
+                    {% if goal_analytics.total_reminders %}
                     <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_reminders }}</p>
+                    {% else %}
+                    <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">---</p>
+                    {% endif %}
+                    {% comment %} <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_reminders }}</p> {% endcomment %}
                 </div>
             </div>
             <div class="flex-1 w-32 ...">
                 <div class="max-w-sm p-3 bg-white border border-gray-200 rounded shadow dark:bg-gray-800 dark:border-gray-700">
                     <p style="font-weight: bold;" class="mb-1 font-normal text-sm text-center text-gray-450 dark:text-gray-450">SENSE</p>
+                    {% if goal_analytics.total_sense %}
                     <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_sense }}</p>
+                    {% else %}
+                    <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">---</p>
+                    {% endif %}
+                    {% comment %} <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_sense }}</p> {% endcomment %}
                 </div>
             </div>
             <div class="flex-1 w-32 ...">
                 <div class="max-w-sm p-3 bg-white border border-gray-200 rounded shadow dark:bg-gray-800 dark:border-gray-700">
                     <p style="font-weight: bold;" class="mb-1 font-normal text-sm text-center text-gray-450 dark:text-gray-450">SHIFT</p>
+                    {% if goal_analytics.total_shift %}
                     <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_shift }}</p>
+                    {% else %}
+                    <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">---</p>
+                    {% endif %}
+                    {% comment %} <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_shift }}</p> {% endcomment %}
                 </div>
             </div>
             <div class="flex-auto w-32 ...">
                 <div class="max-w-sm p-3 bg-white border border-gray-200 rounded shadow dark:bg-gray-800 dark:border-gray-700">
                     <p style="font-weight: bold;" class="mb-1 font-normal text-sm text-center text-gray-450 dark:text-gray-450">ACT</p>
+                    {% if goal_analytics.total_act %}
                     <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_act }}</p>
+                    {% else %}
+                    <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">---</p>
+                    {% endif %}
+                    {% comment %} <p style="color: #980DFF; font-weight: bold;" class="mb-1 font-bold text-sm text-center text-indigo-600 dark:text-indigo-600">{{ goal_analytics.total_act }}</p> {% endcomment %}
                 </div>
             </div>
         </div>

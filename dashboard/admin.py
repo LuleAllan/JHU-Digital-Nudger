@@ -32,7 +32,7 @@ class DashboardAdminClass(ModelAdmin):
             response = requests.get(url=url)
             return json.loads(response._content)
         except Exception as e:
-            ...
+            return []
             
     def goal_details(self):
         try:
@@ -41,7 +41,7 @@ class DashboardAdminClass(ModelAdmin):
             response = requests.get(url=url)
             return json.loads(response._content)
         except Exception as e:
-            ...
+            return []
         
     def user_notes(self):
         try:
@@ -49,7 +49,7 @@ class DashboardAdminClass(ModelAdmin):
             response = requests.get(url=url)
             return response.json()
         except Exception as e:
-            ...
+            return []
         
     def changelist_view(self, request, extra_context=None):
         # Aggregate new trainers per day
